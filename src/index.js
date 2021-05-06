@@ -1,4 +1,5 @@
+import createClient from './create-client';
 import defineEvent from './define-event';
 import SchemaTypes from './schema-types';
 
-export { defineEvent, SchemaTypes };
+export { createClient, defineEvent, SchemaTypes };
