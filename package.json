@@ -10,9 +10,13 @@
   "private": false,
   "scripts": {
     "build": "rollup --config",
-    "dev": "rollup --config --watch"
+    "watch": "rollup --config --watch",
+    "test": "jest",
+    "test-watch": "jest --watch"
   },
   "devDependencies": {
-    "rollup": "^2.47.0"
+    "jest": "^26.6.3",
+    "rollup": "^2.47.0",
+    "rollup-jest": "^1.1.1"
   }
 }
