@@ -1,11 +1,25 @@
-export default function createClient(options = {}) {
-  const { url, headers, onSuccess, onError } = options;
+function trackEvent(event, clientOptions) {
+  const { uri, headers = {}, requestOptions = {} } = clientOptions;
 
-  if (!url) {
-    throw new Error('You must provide a URL when creating a Backtrack client');
+  const request = fetch(uri, {
+    ...requestOptions,
+    method: 'POST',
+    headers: {
+      ...headers,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(event),
+  });
+
+  return request;
+}
+
+export default function createClient(options = {}) {
+  if (!options.uri) {
+    throw new Error('You must provide a URI when creating a Backtrack client');
   }
 
   return {
-    trackEvent: () => {},
+    trackEvent: event => trackEvent(event, options),
   };
 }
