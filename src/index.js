@@ -1,5 +1,4 @@
-const helloWorld = () => {
-  console.log('HELLO WORLD');
-};
+import defineEvent from './define-event';
+import schemaTypes from './schema-types';
 
-export default helloWorld;
+export { defineEvent, schemaTypes };

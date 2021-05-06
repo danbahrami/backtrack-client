@@ -1,4 +1,5 @@
 import defineEvent from './define-event';
+import schemaTypes from '../schema-types';
 
 describe('defineEvent', () => {
   it('throws an error when no name argument is provided', () => {
@@ -12,7 +13,7 @@ describe('defineEvent', () => {
   });
 
   describe('the returned event factory function', () => {
-    const SCHEMA = { location: 'string' };
+    const SCHEMA = { location: schemaTypes.string };
     const PROPERTIES = { lodation: 'Masthead' };
 
     it('returns an event object that includes the event name, schema and event properties', () => {
