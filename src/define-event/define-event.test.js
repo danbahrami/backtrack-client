@@ -12,11 +12,18 @@ describe('defineEvent', () => {
   });
 
   describe('the returned event factory function', () => {
-    it('returns an event object that includes the event name', () => {
-      const buttonClicked = defineEvent('Button clicked');
-      const event = buttonClicked();
+    const SCHEMA = { location: 'string' };
+    const PROPERTIES = { lodation: 'Masthead' };
 
-      expect(event.name).toBe('Button clicked');
+    it('returns an event object that includes the event name, schema and event properties', () => {
+      const buttonClicked = defineEvent('Button clicked', SCHEMA);
+      const event = buttonClicked(PROPERTIES);
+
+      expect(event).toEqual({
+        name: 'Button clicked',
+        properties: PROPERTIES,
+        schema: SCHEMA,
+      });
     });
   });
 });
