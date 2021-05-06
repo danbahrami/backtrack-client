@@ -1,3 +1,5 @@
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+
 export default {
   input: 'src/index.js',
   output: [
@@ -14,4 +16,5 @@ export default {
       sourcemap: true,
     },
   ],
+  plugins: [nodeResolve()],
 };
