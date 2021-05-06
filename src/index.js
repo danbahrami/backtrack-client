@@ -1,4 +1,4 @@
 import defineEvent from './define-event';
-import schemaTypes from './schema-types';
+import SchemaTypes from './schema-types';
 
-export { defineEvent, schemaTypes };
+export { defineEvent, SchemaTypes };

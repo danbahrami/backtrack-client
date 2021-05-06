@@ -1,3 +1,3 @@
-import schemaTypes from './schema-types';
+import SchemaTypes from './schema-types';
 
-export default schemaTypes;
+export default SchemaTypes;
