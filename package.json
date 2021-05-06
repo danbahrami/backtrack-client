@@ -1,0 +1,10 @@
+{
+  "name": "backtrack-client",
+  "version": "1.0.0",
+  "description": "Type validation for tracking events",
+  "main": "main.js",
+  "repository": "git@github.com:danbahrami/backtrack-client.git",
+  "author": "danbahrami <dan.bahrami@googlemail.com>",
+  "license": "MIT",
+  "private": false
+}
