@@ -1,3 +1,3 @@
 module.exports = {
-  preset: "rollup-jest",
+  preset: 'rollup-jest',
 };
